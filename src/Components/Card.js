@@ -1,14 +1,14 @@
 import React from 'react'
-import { Row, Col } from 'antd'
-
+import { Row, Col,Card } from 'antd'
+const { Meta } = Card;
 
 const adsData = [
     {
         id:1,
         companyId:3,
-        primaryText:'The world’s leading CRM is ready to help you simplify the business part of your small business.',
+        primaryText:"The world’s leading CRM is ready to help you simplify the business part of your small business.",
         headline:'Salesforce for Small Business',
-        description:'',
+        description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
         cta:'Sign Up',
         imageUrl:'https://scontent-lax3-1.xx.fbcdn.net/v/t39.35426-6/272836524_2153961231425063_357450253016481676_n.jpg?stp=dst-jpg_s600x600&_nc_cat=104&ccb=1-7&_nc_sid=cf96c8&_nc_ohc=L2Nkkg2Lb7AAX8MFWMk&_nc_ht=scontent-lax3-1.xx&oh=00_AT-m5FwsdNtjj4Eg_tpLTCYnXD2agiVZIYmPNukPVcQpgg&oe=62FF1CFB'
   
@@ -77,15 +77,22 @@ const adsData = [
     }
   ]
 
-export default function Card() {
+export default function CardPage() {
     return (
         <div>
             <Row gutter={16}>
                 <Col className="gutter-row" span={6}>
                     
-                        <div>
-                            <h1>dsgdfagfd</h1>
-                        </div>
+                    <div className='card'>
+                        <Card 
+                        hoverable
+                            style={{
+                                marginLeft:'550px'
+                            }}
+                            cover={<img alt="example" style={{width:'200px', height:'200px'}} src={adsData[0].imageUrl} />} >
+                            <Meta title={adsData[0].headline} description={adsData[0].primaryText} />
+                        </Card>
+                    </div>
                 </Col>
             </Row>
         </div>
