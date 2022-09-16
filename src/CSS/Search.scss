@@ -1,3 +1,26 @@
-.sea{
-    display: flex;
+.main{
+    background-color:bisque;
+    height: 100vh;
+    h1{
+        color: chartreuse;
+        text-align: center;
+        padding-top: 50px;
+    }
+    p{
+        color: chocolate;
+        text-align: center;
+    }
+}
+
+.search{
+    text-align: center;
+    height: 50px;
+}
+.ant-input{
+    height: 30px;
+    width: 500px;
+}
+.ant-input-search-button{
+    height: 35px;
+    width: 40px;
 }
